@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "sites": [
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "domains": [
+        "chatgpt.com"
+      ],
+      "rules": [
+        {
+          "category": "recommendations",
+          "selector": ".max-w-app-content:has-text(\"Try a style on an image\")"
+        },
+        {
+          "category": "recommendations",
+          "selector": "section:has(h2:has-text(\"Explore ideas\"))"
+        },
+        {
+          "category": "recommendations",
+          "selector": "section:has(h2:has-text(\"Create an image\"))"
+        },
+        {
+          "category": "clutter",
+          "selector": "form[data-type=\"unified-composer\"] ~ div.absolute"
+        },
+        {
+          "category": "clutter",
+          "selector": "[class*=\"keyboard-open\"] ul"
+        }
+      ]
+    },
+    {
+      "id": "x",
+      "name": "X / Twitter",
+      "domains": [
+        "x.com",
+        "twitter.com"
+      ],
+      "rules": [
+        {
+          "category": "feeds",
+          "selector": "[aria-label=\"Timeline: Your Home Timeline\"], [aria-label=\"Timeline: Explore\"]"
+        },
+        {
+          "category": "recommendations",
+          "selector": "[aria-label=\"Timeline: Trending now\"], aside[aria-label=\"Who to follow\"], [aria-label=\"Trending\"], [data-testid=\"cellInnerDiv\"]:has(button[data-testid=\"UserCell\"]), a[href^=\"/i/connect_people?user_id=\"], [data-testid=\"verified_profile_visitor_upsell\"]"
+        },
+        {
+          "category": "comments",
+          "selector": "div[aria-label=\"Timeline: Conversation\"] > div > div:not(:first-child)"
+        },
+        {
+          "category": "clutter",
+          "selector": "input[placeholder=\"Search\"], a[role=\"tab\"]"
+        }
+      ]
+    },
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "domains": [
+        "youtube.com"
+      ],
+      "rules": [
+        {
+          "category": "feeds",
+          "selector": "ytd-browse[page-subtype=\"home\"], ytd-browse[page-subtype=\"subscriptions\"], ytd-shorts"
+        },
+        {
+          "category": "recommendations",
+          "selector": "#related, .ytd-item-section-renderer",
+          "path": "^/watch$"
+        },
+        {
+          "category": "recommendations",
+          "selector": ".ytp-more-videos-view, .ytp-endscreen-content, .ytp-ce-element, .ytp-ce-video, .ytp-ce-playlist, .ytp-ce-channel, .ytp-pause-overlay, .ytp-fullscreen-grid-stills-container, ytd-reel-shelf-renderer, ytd-rich-shelf-renderer[is-shorts]"
+        },
+        {
+          "category": "comments",
+          "selector": "ytd-comments, #comments.ytd-watch-flexy"
+        },
+        {
+          "category": "clutter",
+          "selector": ".ytd-yoodle-renderer, ytd-yoodle-renderer"
+        }
+      ]
+    },
+    {
+      "id": "reddit",
+      "name": "Reddit",
+      "domains": [
+        "reddit.com"
+      ],
+      "rules": [
+        {
+          "category": "feeds",
+          "selector": "shreddit-feed"
+        },
+        {
+          "category": "feeds",
+          "selector": ".sitetable.linklisting, .Post",
+          "path": "^/(?:$|r/[^/]+/?$|(?:hot|new|top|best|rising|controversial)/?$)"
+        },
+        {
+          "category": "recommendations",
+          "selector": "reddit-recent-pages, community-highlight-carousel, shreddit-gallery-carousel"
+        },
+        {
+          "category": "clutter",
+          "selector": "faceplate-tracker[noun=\"games_drawer\"], left-nav-top-section"
+        },
+        {
+          "category": "comments",
+          "selector": "shreddit-comment-tree, .commentarea"
+        }
+      ]
+    },
+    {
+      "id": "amazon",
+      "name": "Amazon",
+      "domains": [
+        "amazon.com",
+        "amazon.co.uk",
+        "amazon.ca",
+        "amazon.de",
+        "amazon.fr",
+        "amazon.in",
+        "amazon.com.au",
+        "amazon.co.jp"
+      ],
+      "rules": [
+        {
+          "category": "feeds",
+          "selector": "#gwm-window-layout"
+        },
+        {
+          "category": "feeds",
+          "selector": "#gw-layout",
+          "path": "^/$"
+        },
+        {
+          "category": "recommendations",
+          "selector": "#similarities_feature_div, #sims-consolidated-2_feature_div, #sims-consolidated-1_feature_div, #rhf"
+        }
+      ]
+    },
+    {
+      "id": "facebook",
+      "name": "Facebook",
+      "domains": [
+        "facebook.com"
+      ],
+      "rules": [
+        {
+          "category": "feeds",
+          "selector": "[role=\"feed\"]"
+        },
+        {
+          "category": "feeds",
+          "selector": "[role=\"main\"]",
+          "path": "^/$"
+        },
+        {
+          "category": "recommendations",
+          "selector": "[aria-label=\"Stories\"]"
+        }
+      ]
+    },
+    {
+      "id": "instagram",
+      "name": "Instagram",
+      "domains": [
+        "instagram.com"
+      ],
+      "rules": [
+        {
+          "category": "feeds",
+          "selector": "main, [role=\"main\"]",
+          "path": "^/(?:$|explore(?:/|$)|reels(?:/|$))"
+        }
+      ]
+    },
+    {
+      "id": "linkedin",
+      "name": "LinkedIn",
+      "domains": [
+        "linkedin.com"
+      ],
+      "rules": [
+        {
+          "category": "feeds",
+          "selector": ".scaffold-finite-scroll, .feed-container-theme",
+          "path": "^/feed(?:/|$)"
+        },
+        {
+          "category": "recommendations",
+          "selector": ".feed-follows-module, .feed-shared-news-module, .scaffold-layout__aside",
+          "path": "^/feed(?:/|$)"
+        }
+      ]
+    },
+    {
+      "id": "threads",
+      "name": "Threads",
+      "domains": [
+        "threads.net",
+        "threads.com"
+      ],
+      "rules": [
+        {
+          "category": "feeds",
+          "selector": "[role=\"main\"], main",
+          "path": "^/(?:$|following/?$|for_you/?$)"
+        }
+      ]
+    },
+    {
+      "id": "tiktok",
+      "name": "TikTok",
+      "domains": [
+        "tiktok.com"
+      ],
+      "rules": [
+        {
+          "category": "feeds",
+          "selector": "[data-e2e=\"recommend-list-item-container\"], [data-e2e=\"recommend-list\"], [data-e2e=\"explore-item-list\"]"
+        },
+        {
+          "category": "feeds",
+          "selector": "main, [role=\"main\"]",
+          "path": "^/(?:$|foryou/?$|following/?$|explore/?$)"
+        }
+      ]
+    },
+    {
+      "id": "pinterest",
+      "name": "Pinterest",
+      "domains": [
+        "pinterest.com"
+      ],
+      "rules": [
+        {
+          "category": "feeds",
+          "selector": "[data-test-id=\"homefeed\"]"
+        },
+        {
+          "category": "recommendations",
+          "selector": "[data-test-id=\"related-pins\"]"
+        }
+      ]
+    },
+    {
+      "id": "twitch",
+      "name": "Twitch",
+      "domains": [
+        "twitch.tv"
+      ],
+      "rules": [
+        {
+          "category": "feeds",
+          "selector": ".front-page-carousel, .front-page-shelf",
+          "path": "^/$"
+        },
+        {
+          "category": "recommendations",
+          "selector": "[data-a-target=\"recommended-channel-list\"], .recommended-channels"
+        }
+      ]
+    }
+  ]
+}
