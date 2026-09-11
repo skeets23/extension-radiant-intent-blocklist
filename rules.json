@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 1,
+  "revision": 2,
   "sites": [
     {
       "id": "chatgpt",
@@ -49,7 +49,7 @@
         },
         {
           "category": "comments",
-          "selector": "div[aria-label=\"Timeline: Conversation\"] > div > div:not(:first-child)"
+          "selector": "div[aria-label=\"Timeline: Conversation\"] > div > div:not(:first-child):style(visibility: hidden)"
         },
         {
           "category": "clutter",
