@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 2,
+  "revision": 3,
   "sites": [
     {
       "id": "chatgpt",
@@ -27,7 +27,7 @@
         },
         {
           "category": "clutter",
-          "selector": "[class*=\"keyboard-open\"] ul"
+          "selector": "[class*=\"keyboard-open\"] ul:not(div[role=\"dialog\"] ul)"
         }
       ]
     },
