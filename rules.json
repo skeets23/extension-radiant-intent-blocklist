@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 3,
+  "revision": 4,
   "sites": [
     {
       "id": "chatgpt",
@@ -110,10 +110,6 @@
         {
           "category": "clutter",
           "selector": "faceplate-tracker[noun=\"games_drawer\"], left-nav-top-section"
-        },
-        {
-          "category": "comments",
-          "selector": "shreddit-comment-tree, .commentarea"
         }
       ]
     },
