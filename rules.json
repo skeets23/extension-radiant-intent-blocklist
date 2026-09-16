@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 4,
+  "revision": 5,
   "sites": [
     {
       "id": "chatgpt",
@@ -96,7 +96,8 @@
       "rules": [
         {
           "category": "feeds",
-          "selector": "shreddit-feed"
+          "selector": "shreddit-feed",
+          "path": "^/(?!user/|u/)"
         },
         {
           "category": "feeds",
