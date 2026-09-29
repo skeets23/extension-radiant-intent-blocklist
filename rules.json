@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 7,
+  "revision": 8,
   "sites": [
     {
       "id": "chatgpt",
@@ -71,7 +71,7 @@
         {
           "category": "recommendations",
           "selector": "#related, .ytd-item-section-renderer",
-          "path": "^/watch$"
+          "path": "^/(?:watch/?$|live/[^/]+/?$)"
         },
         {
           "category": "recommendations",
