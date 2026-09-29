@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 6,
+  "revision": 7,
   "sites": [
     {
       "id": "chatgpt",
@@ -264,6 +264,20 @@
         {
           "category": "recommendations",
           "selector": "[data-a-target=\"recommended-channel-list\"], .recommended-channels"
+        }
+      ]
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "domains": [
+        "open.spotify.com"
+      ],
+      "rules": [
+        {
+          "category": "feeds",
+          "selector": "main, [role=\"main\"], [data-testid=\"home-page\"]",
+          "path": "^/(?:intl-[a-zA-Z-]+/)?(?:home/?)?$"
         }
       ]
     }
