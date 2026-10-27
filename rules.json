@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 8,
+  "revision": 9,
   "sites": [
     {
       "id": "chatgpt",
@@ -54,6 +54,18 @@
         {
           "category": "clutter",
           "selector": "input[placeholder=\"Search\"], a[role=\"tab\"]"
+        },
+        {
+          "category": "recommendations",
+          "selector": "section:has(h2:has-text(\"Today’s News\"))"
+        },
+        {
+          "category": "recommendations",
+          "selector": "section:has(h2:has-text(\"Today's News\"))"
+        },
+        {
+          "category": "recommendations",
+          "selector": "section:has(h2:has-text(\"Who to follow\"))"
         }
       ]
     },
