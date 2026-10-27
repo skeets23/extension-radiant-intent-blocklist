@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 10,
+  "revision": 11,
   "sites": [
     {
       "id": "chatgpt",
@@ -57,19 +57,7 @@
         },
         {
           "category": "recommendations",
-          "selector": "section:has(h2:has-text(\"Today’s News\"))"
-        },
-        {
-          "category": "recommendations",
-          "selector": "section:has(h2:has-text(\"Today's News\"))"
-        },
-        {
-          "category": "recommendations",
-          "selector": "section:has(h2:has-text(\"Who to follow\"))"
-        },
-        {
-          "category": "recommendations",
-          "selector": "section:has(h2:has-text(\"Live on X\"))"
+          "selector": "aside[class~=\"lg:flex\"], [data-testid=\"sidebarColumn\"]"
         }
       ]
     },
