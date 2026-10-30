@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 11,
+  "revision": 12,
   "sites": [
     {
       "id": "chatgpt",
@@ -157,7 +157,7 @@
         {
           "category": "feeds",
           "selector": "[role=\"feed\"]",
-          "path": "^/(?!groups/(?!(?:feed|discover|joins|notifications|create|search|your_groups)(?:/|$))[^/]+(?:/|$))"
+          "path": "^/(?!search(?:/|$)|search\\.php$)(?!groups/(?!(?:feed|discover|joins|notifications|create|search|your_groups)(?:/|$))[^/]+(?:/|$))"
         },
         {
           "category": "feeds",
