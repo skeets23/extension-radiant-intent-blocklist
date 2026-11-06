@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 12,
+  "revision": 13,
   "sites": [
     {
       "id": "chatgpt",
@@ -282,6 +282,26 @@
           "category": "feeds",
           "selector": "main, [role=\"main\"], [data-testid=\"home-page\"]",
           "path": "^/(?:intl-[a-zA-Z-]+/)?(?:home/?)?$"
+        }
+      ]
+    },
+    {
+      "id": "bbc",
+      "name": "BBC",
+      "domains": [
+        "bbc.com",
+        "bbc.co.uk"
+      ],
+      "rules": [
+        {
+          "category": "feeds",
+          "selector": "#bbc-main [data-testid$=\"-card\"], #bbc-main a:has([data-testid=\"card-headline\"])",
+          "path": "^/(?:home/?)?$"
+        },
+        {
+          "category": "recommendations",
+          "selector": "[data-testid=\"links-grid\"], [data-testid^=\"ohio-section-outer\"], [data-testid=\"alaska-section-outer\"], [data-testid=\"texas-section-outer\"], [data-testid$=\"-card\"], a:has([data-testid=\"card-headline\"])",
+          "path": "^/(?:[^/]+/)*(?:articles?|videos?|live)/[^/]+/?$"
         }
       ]
     }
