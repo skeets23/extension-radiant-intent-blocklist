@@ -1,6 +1,6 @@
 # Radiant Intent Privacy Policy
 
-Last updated: September 11, 2026
+Last updated: November 6, 2026
 
 Radiant Intent helps users reduce distractions by filtering website content and applying user-selected website restrictions.
 
@@ -15,7 +15,7 @@ The extension does not include analytics, advertising trackers, or click, keystr
 
 ## External requests and sharing
 
-The extension periodically downloads built-in filter configuration from this project's public GitHub repository. GitHub and its delivery infrastructure receive ordinary connection information, such as the requester's IP address, when serving these requests. No browsing URLs, page content, custom rules, or API keys are attached to filter-update requests.
+The extension periodically downloads built-in filter configuration from this project's public GitHub repository. Manual sync also queries GitHub's API for the latest commit before downloading that exact version. GitHub and its delivery infrastructure receive ordinary connection information, such as the requester's IP address, when serving these requests. No browsing URLs, page content, custom rules, or API keys are attached to filter-update requests.
 
 Optional integrations contact only the HTTPS API endpoints configured by the user:
 
@@ -36,7 +36,7 @@ Manual exports contain all saved settings, including API keys, in an unencrypted
 
 ## User controls
 
-Users can edit settings, remove optional API configurations, import or export settings, or uninstall the extension. A configured work-clock lock can temporarily prevent settings changes while the user is clocked in or the API cannot be verified. No account with the developer is required.
+Users can edit settings, remove optional API configurations, import or export settings, or uninstall the extension. A configured work-clock lock can temporarily prevent settings changes while the API reports that the user is clocked in. API failures, timeouts, and invalid responses release the lock so settings can be repaired; they do not automatically lower the selected focus mode. No account with the developer is required.
 
 ## Limited Use
 
