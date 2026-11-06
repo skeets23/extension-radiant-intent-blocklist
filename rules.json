@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 13,
+  "revision": 14,
   "sites": [
     {
       "id": "chatgpt",
@@ -295,13 +295,17 @@
       "rules": [
         {
           "category": "feeds",
-          "selector": "#bbc-main [data-testid$=\"-card\"], #bbc-main a:has([data-testid=\"card-headline\"])",
-          "path": "^/(?:home/?)?$"
+          "selector": "#bbc-main, main",
+          "path": "^/(?!(?:(?:[^/]+/)*(?:articles?|videos?|live)/(?!docs/?$)[^/]+/?$)|.*(?:-|/)\\d{6,}/?$)(?:$|(?:home|news|sport|business|technology|innovation|health|culture|arts|travel|future|future-planet|earth|audio|video|live)(?:/|$))"
         },
         {
           "category": "recommendations",
-          "selector": "[data-testid=\"links-grid\"], [data-testid^=\"ohio-section-outer\"], [data-testid=\"alaska-section-outer\"], [data-testid=\"texas-section-outer\"], [data-testid$=\"-card\"], a:has([data-testid=\"card-headline\"])",
-          "path": "^/(?:[^/]+/)*(?:articles?|videos?|live)/[^/]+/?$"
+          "selector": "[data-testid*=\"-section-outer\"], [data-testid=\"links-grid\"], [data-testid$=\"-card\"], a:has([data-testid=\"card-headline\"])",
+          "path": "^/(?:(?:[^/]+/)*(?:articles?|videos?|live)/(?!docs/?$)[^/]+/?$)"
+        },
+        {
+          "category": "clutter",
+          "selector": "[data-testid=\"level1-navigation-container\"], footer, #bbc-footer, [data-testid=\"ad-unit\"]"
         }
       ]
     }
