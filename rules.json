@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 14,
+  "revision": 15,
   "sites": [
     {
       "id": "chatgpt",
@@ -306,6 +306,19 @@
         {
           "category": "clutter",
           "selector": "[data-testid=\"level1-navigation-container\"], footer, #bbc-footer, [data-testid=\"ad-unit\"]"
+        },
+        {
+          "category": "feeds",
+          "selector": "#bbc-main, main",
+          "path": "^/watch-live-news(?:/|$)"
+        },
+        {
+          "category": "clutter",
+          "selector": "a[href*=\"/watch-live-news\"], [data-testid=\"navigationPanel-navItem-level0-/watch-live-news/\"]"
+        },
+        {
+          "category": "clutter",
+          "selector": "button:has-text(\"Watch Live\")"
         }
       ]
     }
